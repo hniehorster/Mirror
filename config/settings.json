@@ -1,0 +1,72 @@
+{
+  "modules": {
+    "youtube": {
+      "app_name": "Youtube",
+      "app_icon": "youtube.jpg",
+      "main_window_width": 1024,
+      "main_window_height": 600,
+      "default_visibility": false,
+      "is_app": true
+    },
+    "google": {
+      "app_name": "Google",
+      "app_icon": "google.jpg",
+      "main_window_width": 500,
+      "main_window_height": 500,
+      "default_visibility": false,
+      "is_app": true
+    },
+    "sonos": {
+      "app_name": "Sonos",
+      "app_icon": "sonos.jpg",
+      "main_window_width": 500,
+      "main_window_height": 500,
+      "default_visibility": false,
+      "is_app": true
+    },
+    "time": {
+      "app_name": "Clock",
+      "app_icon": "Clock.png",
+      "main_window_width": 200,
+      "main_window_height": 150,
+      "default_visibility": false,
+      "external": {
+        "script": "clock.js",
+        "css": "clock.css"
+      },
+      "is_app": true
+    },
+    "calendar": {
+      "app_name": "Calendar",
+      "app_icon": "calendar.png",
+      "main_window_width": 500,
+      "main_window_height": 500,
+      "default_visibility": false,
+      "external": {
+        "script": "calendar.js",
+        "css": "calendar.css"
+      },
+      "is_app": true
+    },
+    "Weather": {
+      "app_name": "Weather",
+      "app_icon": "weather.png",
+      "main_window_width": 200,
+      "main_window_height": 150,
+      "default_visibility": false,
+      "external": {
+        "script": "weather.js",
+        "css": "weather.css"
+      },
+      "is_app": true
+    },
+    "blackout":{
+      "app_name": "Blackout",
+      "external": {
+        "script": "blackout.js",
+        "css": "blackout.css"
+      },
+      "is_app": false
+    }
+  }
+}

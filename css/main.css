@@ -1,0 +1,54 @@
+/**
+FRAMEWORK
+ */
+#blackoutScreen{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    height: 0px;
+}
+
+body {
+    background:#000;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
+CONTAINER
+ */
+img#close_app{
+    position: relative;
+    top: -12px;
+    right: -12px;
+    float: right;
+}
+
+/*
+FOOTER ICONS
+ */
+footer #apps_container{
+    margin: 0px auto;
+}
+
+footer .app{
+    color: #fff;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+footer .app img{
+    width: 70px;
+    height: 70px;
+    border-radius: 14px;
+}
