@@ -1,0 +1,51 @@
+#News{
+    background: #000 !important;
+    border:0px;
+}
+
+.newsItem{
+    width: 100%;
+}
+
+.newsImage{
+    width: 15%;
+    float: left;
+}
+
+.newsImage img{
+    width: 100%;
+    height: auto;
+}
+.newsTitle {
+    width: 80%;
+    float:left;
+    margin: 0px 0px 0px 4px;
+    font-weight: bold;
+}
+.newsUpdated{
+    width: 100%;
+    text-align: right;
+}
+
+/** NEWS ITEM ***/
+
+#NewsItems{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+
+.newsItemImage img {
+    width: 100px;
+    height: auto;
+    float: left;
+}
+
+.newsItemDate{
+    width: 100%;
+    text-align: right;
+}
+
+.newsItemDescription{
+    width: 100%;
+}
