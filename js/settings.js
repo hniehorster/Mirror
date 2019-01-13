@@ -16,7 +16,7 @@ $.getJSON("config/settings.json", function(json){
         console.info(appDetails);
 
         if(appDetails.is_app){
-            $( ".apps_container" ).append('<div class="app" data-app-div="' + appUniqueId + '">' +
+            $( ".apps_container" ).append('<div class="app defaultText" data-app-div="' + appUniqueId + '">' +
                 '<img src="modules/'+ appDetails.app_name +'/' + appDetails.app_icon + '" />' +
                 '<p>' + appDetails.app_name + '</p>' +
                 '</div>');
@@ -37,8 +37,12 @@ $.getJSON("config/settings.json", function(json){
 
             $( ".container").append('' +
                 '<div class="ui-widget-content" id="' + appUniqueId + '" style="' + appVisibility + appWindowWidth + appWindowHeight + '">' +
-                '<img src="images/x.png" id="close_app" />' +
-                '<div class="app_content"><p>' + appUniqueId + '</p></div>' +
+                    '<img src="images/x.png" id="close_app" />' +
+                    '<div class="app_title">' +
+                        '<h3>' + appDetails.app_name +'</h3>' +
+                    '</div>' +
+                    '<div class="app_content">' +
+                    '</div>' +
                 '</div>');
 
             $("#" + appUniqueId + "").draggable();
@@ -71,8 +75,7 @@ $.getJSON("config/settings.json", function(json){
 $(document).on('click','.app', function()
 {
     var appDiv = $(this).data('app-div');
-
-    $("#" + appDiv + "").toggle();
+    $("div[id^='" + appDiv + "']").toggle();
 
 });
 
@@ -85,12 +88,3 @@ $(document).on('click','#close_app', function()
 
     $(appDiv).toggle();
 });
-
-function grabExternalData(url) {
-
-    var returnData = "";
-
-
-
-    return returnData;
-}

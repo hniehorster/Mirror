@@ -4,3 +4,44 @@
     padding: 0.5em;
     background-color: #000;
 }
+div.app_title{
+    width:100%;
+    border-bottom: 1px #333 solid;
+}
+
+div.app_title h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0px 0px 4px;
+}
+div.app_content{
+    color:#fff;
+}
+
+/** Text Styles **/
+.defaultText {
+    font-size: 12px;
+}
+.mediumText {
+    font-size: 16px;
+}
+.smallSubText{
+    font-size: 8px;
+}
+
+/** appContainer Styles **/
+
+/** DEFAULT MARGINS **/
+.mtD{
+    margin-top: 8px;
+}
+.mbD{
+    margin-bottom: 8px;
+}
+.mrD{
+    margin-right: 8px;
+}
+.mlD{
+    margin-left: 8px;
+}
