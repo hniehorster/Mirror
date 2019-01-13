@@ -51,12 +51,24 @@
     "Weather": {
       "app_name": "Weather",
       "app_icon": "weather.png",
-      "main_window_width": 200,
-      "main_window_height": 150,
+      "main_window_width": 300,
+      "main_window_height": 300,
       "default_visibility": false,
       "external": {
         "script": "weather.js",
         "css": "weather.css"
+      },
+      "is_app": true
+    },
+    "Nu": {
+      "app_name": "Nu",
+      "app_icon": "nu.jpg",
+      "main_window_width": 300,
+      "main_window_height": 300,
+      "default_visibility": false,
+      "external": {
+        "script": "nu.js",
+        "css": "nu.css"
       },
       "is_app": true
     },

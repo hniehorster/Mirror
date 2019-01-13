@@ -14,7 +14,6 @@ $(document).on('click','body', function(){
             blackOutActive = false;
 
             blackOutTimer++;
-            console.log('Blackout Timer: ' + blackOutTimer);
 
             if(blackOutTimer > blackoutOffset){
 

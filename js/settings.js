@@ -32,7 +32,7 @@ $.getJSON("config/settings.json", function(json){
             }
 
             if(appDetails.main_window_height){
-                appWindowHeight = "width: " + appDetails.main_window_height + "px;";
+                appWindowHeight = "height: " + appDetails.main_window_height + "px;";
             }
 
             $( ".container").append('' +
@@ -65,7 +65,8 @@ $.getJSON("config/settings.json", function(json){
         }
 
     });
-});
+})
+    .error(function() { alert("error"); });
 
 $(document).on('click','.app', function()
 {
@@ -84,3 +85,12 @@ $(document).on('click','#close_app', function()
 
     $(appDiv).toggle();
 });
+
+function grabExternalData(url) {
+
+    var returnData = "";
+
+
+
+    return returnData;
+}

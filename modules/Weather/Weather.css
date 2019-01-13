@@ -1,0 +1,72 @@
+#Weather{
+    background: #000 !important;
+    border:0px;
+
+}
+
+.weatherHeader{
+    text-align:left;
+    width: 100%;
+    color:#fff;
+    font-size: 35px;
+    padding: 25px;
+    font-weight: bold;
+}
+.weatherCurrentlyIcon{
+    width: 30%;
+    float: left;
+}
+.weatherCurrentlyIcon img{
+    width: 100%;
+    height: auto;
+}
+.weatherCurrentlyText{
+    width: 65%;
+    float: left;
+    padding: 0% 0% 0% 5%;
+}
+.weatherHeader small{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.weatherWidget{
+    width: 300px;
+}
+
+/**
+WEATHER FORECAST
+ */
+
+.weatherForecast{
+    border-top: 1px #515151 solid;
+    float:left;
+    width:100%;
+}
+
+.forecastDay{
+    margin-top: 4px;
+    color:#fff;
+}
+
+.forecastText {
+    float: left;
+    margin: 8px 0px 0px 15px;
+    color: #fff;
+    width: 40%;
+}
+
+.forecastIcon{
+    float:left;
+    width: 10%;
+}
+
+.forecastIcon img{
+    width: 30px;
+    height: auto;
+}
+.forecastTemperature{
+    width: 40%;
+    margin: 8px 0px 0px 0px;
+    float: left;
+}
