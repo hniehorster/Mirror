@@ -69,4 +69,8 @@ WEATHER FORECAST
     width: 40%;
     margin: 8px 0px 0px 0px;
     float: left;
+    text-align:center;
+}
+.forecastTemperature sup{
+    font-size: 8px;
 }
