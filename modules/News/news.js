@@ -6,36 +6,47 @@
 
 /********* SETTINGS **********/
 
-var newsURL     = "modules/News/nu.xml";
-var itemCount   = 4;
-var refreshRate = 12000;
+var googleNewsAPIKey    = "3a7373730ccc41d5bf43555a596dd0e8";
+var newsURLBase         = "https://newsapi.org/v2/top-headlines?country=nl&apiKey=";
+var itemCount           = 7;
+var refreshRate         = 5000;
 
 /******** END SETTINGS **********/
+
 $("#News > div.app_content").html('<div class="newsWidget">' +
         '<div class="newsItems"></div>'+
     '</div>');
 
+var newsURL = newsURLBase + googleNewsAPIKey;
+
+
 
 /*** START FUNCTION ****/
-setInterval(function() {
+function grabNews() {
     $.when(
-        $.ajax({url: newsURL, type: 'GET', dataType: 'xml'})
+        //$.ajax({url: newsURL, type: 'GET', dataType: 'json'})
+        $.getJSON(newsURL)
     ).then(function (data, textStatus, jqXHR) {
 
         $('.newsItems').empty();
 
+        console.log(data);
+
         var items = [];
-        $('item', data).each(function () {
+        var counter = 0;
+        $.each(data.articles, function (index, element) {
+
+            if(counter == itemCount){
+                return false;
+            }
+
+            console.log('Element found ' + index + element);
+
             var item = {};
-            item.title = $(this).find('title').eq(0).text();
-            item.link = $(this).find('link').eq(0).text();
-            item.description = $(this).find('description').eq(0).text();
-            item.image = $(this).find('enclosure').eq(0).attr('url');
-            item.id = $(this).find('guid').eq(0).text();
-
-            //var updated = $(this).find('pubDate').eq(0).text();
-
-            //var cleanUpdated = new Date(updated);
+            item.title = element.title;
+            item.description = element.content;
+            item.image = element.urlToImage;
+            item.source = element.source;
 
             //item.updated = cleanUpdated.getDate() + " "+cleanUpdated.getTime();
             item.updated = item.updated = $(this).find('pubDate').eq(0).text();
@@ -52,6 +63,8 @@ setInterval(function() {
                 '</div>'
             );
 
+            counter++;
+
         });
 
 
@@ -59,7 +72,7 @@ setInterval(function() {
             '<div class="ui-widget-content" id="NewsItems" style="display: none; width: 400px; height: 400px;">' +
             '<img src="images/x.png" id="close_app" />' +
             '<div class="app_content">' +
-            '<div class="newsItemImage mrD mbD"><img src="" /></div>' +
+            '<div class="newsItemImage mrD mbD"><img src="" class="mrD mbD" /></div>' +
             '<div class="newsItemTitle mediumText"></div>' +
             '<div class="newsItemDate smallSubText mtD mbD"></div>' +
             '<div class="newsItemDescription defaultText"></div>' +
@@ -68,8 +81,10 @@ setInterval(function() {
 
         $("#NewsItems").draggable();
     });
+}
 
-}, refreshRate);
+grabNews();
+setInterval(grabNews, refreshRate);
 /*** END START FUNCTION ***/
 
 
