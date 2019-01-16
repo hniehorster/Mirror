@@ -1,0 +1,36 @@
+#Stocks, #stockItems{
+    background: #000 !important;
+    border:0px;
+}
+
+.stockItem{
+    width: 100%;
+    border-bottom: 1px solid #303030;
+}
+
+.stockSymbol{
+    float: left;
+    text-transform: uppercase;
+}
+
+.stockCurrentPrice{
+    float: left;
+}
+
+.stockChangePercent{
+    float: left;
+    padding: 3px;
+}
+
+.stockChangePercent span, .stockChangePercentYTD span{
+    border-radius: 3px;
+    color: #fff;
+}
+
+.stockChangePercent span.negative, .stockChangePercentYTD span.negative{
+    background-color: #D41639;
+}
+
+.stockChangePercent span.positive, .stockChangePercentYTD span.positive{
+    background-color: #4DB48E;
+}

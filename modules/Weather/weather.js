@@ -9,18 +9,17 @@ var iconLocation        = "modules/Weather/icons/";
 
 /******** END SETTINGS **********/
 
-//DEBUG-LOCAL var weatherURL = "https://api.darksky.net/forecast/" + weatherApiKey + "/" + weatherLatitude + "," + weatherLongtitude +"?units=si";
-var weatherURL = "modules/Weather/weather.json";
+var weatherURL = "https://api.darksky.net/forecast/" + weatherApiKey + "/" + weatherLatitude + "," + weatherLongtitude +"?units=si";
+//DEBUG-LOCAL var weatherURL = "modules/Weather/weather.json";
 
 console.log(weatherURL);
 
 /*** START FUNCTION ****/
 $.when(
-    //$.ajax({ url: weatherURL, type: 'GET', dataType: 'jsonp'})
-    $.getJSON(weatherURL)
+    $.ajax({ url: weatherURL, type: 'GET', dataType: 'jsonp'})
+    //$.getJSON(weatherURL)
 ).then(function( data, textStatus, jqXHR ){
 
-    console.log("Data loaded" + data);
     //let's do some rounding
     var temperature = Math.round(data.currently.temperature);
 
