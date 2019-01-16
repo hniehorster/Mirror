@@ -6,6 +6,9 @@
 .stockItem{
     width: 100%;
     border-bottom: 1px solid #303030;
+    padding: 3px;
+    margin: 5px;
+    line-height: 15px;
 }
 
 .stockSymbol{
@@ -18,8 +21,10 @@
 }
 
 .stockChangePercent{
-    float: left;
-    padding: 3px;
+    float: right;
+}
+.stockChangePercentYTD{
+    float: right;
 }
 
 .stockChangePercent span, .stockChangePercentYTD span{

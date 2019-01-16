@@ -16,7 +16,7 @@ $("#Stocks > div.app_content").html('<div class="stocksWidget">' +
 
 //build Stock Data URL
 
-var stocksURL = apiEndpoint + assets;
+var stocksURL = apiEndpoint + assets.join();
 
 
 function grabStockData(){
@@ -34,17 +34,28 @@ function grabStockData(){
         $.each(data, function(index, item){
             var stock = {};
 
-            stock.symbol        = item.symbol;
-            stock.currentPrice  = item.latestPrice;
-            stock.changePercent = item.changePercent;
-            stock.ytdChange     = item.ytdChange;
+            stock.symbol        = item.quote.symbol;
+            stock.currentPrice  = item.quote.latestPrice.toFixed(2);
+            stock.changePercent = ((item.quote.changePercent)*100).toFixed(2);
+            stock.ytdChange     = ((item.quote.ytdChange)*100).toFixed(2);
+
+            var stockChangePercentClass     = "positive";
+            var stockChangePercentClassYTD  = "positive";
+
+            if(stock.changePercent < 0){
+                stockChangePercentClass     = "negative";
+            }
+
+            if(stock.ytdChange < 0){
+                stockChangePercentClassYTD  = "negative";
+            }
 
             $('.stockItems').append('' +
                 '<div class="stockItem">' +
                     '<div class="stockSymbol">' + stock.symbol + ' </div>' +
                     '<div class="stockCurrentPrice">' + stock.currentPrice + '</div>' +
-                    '<div class="stockChangePercent"><span>' + stock.changePercent + '</span></div>' +
-                    '<div class="stockChangePercentYTD"><span>' + stock.ytdChange + '</span></div>' +
+                    '<div class="stockChangePercent"><span class="' + stockChangePercentClass + '">' + stock.changePercent + ' %</span></div>' +
+                    '<div class="stockChangePercentYTD"><span class="' + stockChangePercentClassYTD +'">' + stock.ytdChange + ' %</span></div>' +
                 '</div>');
         });
     });
