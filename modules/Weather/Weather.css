@@ -16,9 +16,11 @@
     width: 30%;
     float: left;
 }
-.weatherCurrentlyIcon img{
+.weatherCurrentlyIcon{
     width: 100%;
     height: auto;
+    color: white;
+    fill: currentColor;
 }
 .weatherCurrentlyText{
     width: 65%;
@@ -59,6 +61,8 @@ WEATHER FORECAST
 .forecastIcon{
     float:left;
     width: 10%;
+    color: white;
+    fill: currentColor;
 }
 
 .forecastIcon img{

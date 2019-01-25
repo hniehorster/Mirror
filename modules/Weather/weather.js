@@ -69,8 +69,10 @@ $.when(
 
     $("#Weather > div.app_content").html('<div class="weatherWidget">' +
         '<div class="weatherHeader">' +
-            '<div class="weatherCurrentlyIcon"><img src="' + iconLocation + data.currently.icon + '.png" /></div>' +
-            '<div class="weatherCurrentlyText">' + temperature + ' &#8451;' +
+            '<div class="weatherCurrentlyIcon">' +
+                '<svg viewBox="0 0 100 100" class="weatherCurrentlyIcon">\n' +
+                '   <use xlink:href="' + iconLocation + 'weather_sprite.svg#' + data.currently.icon + '"></use>\n' +
+                '</svg>' +
                 '<br>' +
                     '<small>' + data.currently.summary +'</small>' +
             '</div>' +
@@ -79,27 +81,27 @@ $.when(
             '<div class="forecastDay">' +
                 '<div class="forecastText">' + weekday[tomorrow.getDay()] + '</div>' +
                 '<div class="forecastTemperature">' + tomorrowLow + ' <sup>&#8451;</sup> / ' + tomorrowHigh + ' <sup>&#8451;</sup></div>' +
-                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[0].icon + '.png"</div>' +
+                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[0].icon + '.svg"</div>' +
             '</div>' +
             '<div class="forecastDay">' +
                 '<div class="forecastText">' + weekday[tomorrow1.getDay()] + '</div>' +
                 '<div class="forecastTemperature">' + tomorrowLow1 + ' <sup>&#8451;</sup> / ' + tomorrowHigh1 + ' <sup>&#8451;</sup></div>' +
-                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[1].icon + '.png"</div>' +
+                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[1].icon + '.svg"</div>' +
             '</div>' +
             '<div class="forecastDay">' +
                 '<div class="forecastText">' + weekday[tomorrow2.getDay()] + '</div>' +
                 '<div class="forecastTemperature">' + tomorrowLow2 + ' <sup>&#8451;</sup> / ' + tomorrowHigh2 + ' <sup>&#8451;</sup></div>' +
-                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[2].icon + '.png"</div>' +
+                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[2].icon + '.svg"</div>' +
             '</div>' +
             '<div class="forecastDay">' +
                 '<div class="forecastText">' + weekday[tomorrow3.getDay()] + '</div>' +
                 '<div class="forecastTemperature">' + tomorrowLow3 + ' <sup>&#8451;</sup> / ' + tomorrowHigh3 + ' <sup>&#8451;</sup></div>' +
-                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[3].icon + '.png"</div>' +
+                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[3].icon + '.svg"</div>' +
             '</div>' +
             '<div class="forecastDay">' +
                 '<div class="forecastText">' + weekday[tomorrow4.getDay()] + '</div>' +
                 '<div class="forecastTemperature">' + tomorrowLow4 + ' <sup>&#8451;</sup> / ' + tomorrowHigh4 + ' <sup>&#8451;</sup></div>' +
-                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[4].icon + '.png"</div>' +
+                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[4].icon + '.svg"</div>' +
             '</div>' +
         '</div>');
 });
