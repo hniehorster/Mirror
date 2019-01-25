@@ -60,15 +60,27 @@
       },
       "is_app": true
     },
-    "Nu": {
-      "app_name": "Nu",
+    "News": {
+      "app_name": "News",
       "app_icon": "nu.jpg",
       "main_window_width": 300,
       "main_window_height": 300,
       "default_visibility": false,
       "external": {
-        "script": "nu.js",
-        "css": "nu.css"
+        "script": "news.js",
+        "css": "news.css"
+      },
+      "is_app": true
+    },
+    "Stocks": {
+      "app_name": "Stocks",
+      "app_icon": "stocks.png",
+      "main_window_width": 300,
+      "main_window_height": 300,
+      "default_visibility": false,
+      "external": {
+        "script": "stocks.js",
+        "css": "stocks.css"
       },
       "is_app": true
     },
