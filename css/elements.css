@@ -6,7 +6,7 @@
 }
 div.app_title{
     width:100%;
-    border-bottom: 1px #333 solid;
+    border-bottom: 1px #303030 solid;
 }
 
 div.app_title h3{
@@ -21,13 +21,20 @@ div.app_content{
 
 /** Text Styles **/
 .defaultText {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 200;
 }
 .mediumText {
     font-size: 16px;
+    font-weight: 200;
 }
 .smallSubText{
+    font-size: 12px;
+    font-weight: 200;
+}
+.tinySubText{
     font-size: 8px;
+    font-weight: 200;
 }
 
 /** appContainer Styles **/
