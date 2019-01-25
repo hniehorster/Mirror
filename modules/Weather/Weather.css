@@ -1,7 +1,17 @@
 #Weather{
     background: #000 !important;
     border:0px;
+}
 
+.todayIcon{
+    float: left;
+    width: 28%;
+}
+
+.todayDescription{
+    float:right;
+    width: 58%;
+    font-weight: 500;
 }
 
 .weatherHeader{
@@ -13,13 +23,10 @@
     font-weight: bold;
 }
 .weatherCurrentlyIcon{
-    width: 30%;
-    float: left;
-}
-.weatherCurrentlyIcon{
     width: 100%;
     height: auto;
     color: white;
+    margin: 0px 0px 10px 0px;
     fill: currentColor;
 }
 .weatherCurrentlyText{
@@ -74,6 +81,7 @@ WEATHER FORECAST
     margin: 8px 0px 0px 0px;
     float: left;
     text-align:center;
+    font-weight: 200;
 }
 .forecastTemperature sup{
     font-size: 8px;

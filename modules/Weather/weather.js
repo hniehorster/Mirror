@@ -70,38 +70,59 @@ $.when(
     $("#Weather > div.app_content").html('<div class="weatherWidget">' +
         '<div class="weatherHeader">' +
             '<div class="weatherCurrentlyIcon">' +
-                '<svg viewBox="0 0 100 100" class="weatherCurrentlyIcon">\n' +
-                '   <use xlink:href="' + iconLocation + 'weather_sprite.svg#' + data.currently.icon + '"></use>\n' +
-                '</svg>' +
-                '<br>' +
-                    '<small>' + data.currently.summary +'</small>' +
+                '<div class="todayIcon">'+
+                    '<svg viewBox="0 0 75 75" class="weatherCurrentlyIcon">\n' +
+                    '   <use xlink:href="' + iconLocation + 'weather_sprite.svg#' + data.currently.icon + '"></use>\n' +
+                    '</svg>' +
+                '</div>'+
+                '<div class="todayDescription">' + data.currently.summary +'<br />' + temperature + ' <sup>&#8451;</sup></div>' +
             '</div>' +
         '</div>' +
         '<div class="weatherForecast">' +
             '<div class="forecastDay">' +
                 '<div class="forecastText">' + weekday[tomorrow.getDay()] + '</div>' +
                 '<div class="forecastTemperature">' + tomorrowLow + ' <sup>&#8451;</sup> / ' + tomorrowHigh + ' <sup>&#8451;</sup></div>' +
-                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[0].icon + '.svg"</div>' +
+                '<div class="forecastIcon">' +
+                    '<svg viewBox="0 0 75 75" class="weatherCurrentlyIcon">\n' +
+                    '   <use xlink:href="' + iconLocation + 'weather_sprite.svg#' + data.daily.data[0].icon + '"></use>\n' +
+                    '</svg>' +
+                '</div>' +
             '</div>' +
             '<div class="forecastDay">' +
                 '<div class="forecastText">' + weekday[tomorrow1.getDay()] + '</div>' +
                 '<div class="forecastTemperature">' + tomorrowLow1 + ' <sup>&#8451;</sup> / ' + tomorrowHigh1 + ' <sup>&#8451;</sup></div>' +
-                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[1].icon + '.svg"</div>' +
+                '<div class="forecastIcon">' +
+                    '<svg viewBox="0 0 75 75" class="weatherCurrentlyIcon">\n' +
+                    '   <use xlink:href="' + iconLocation + 'weather_sprite.svg#' + data.daily.data[1].icon + '"></use>\n' +
+                    '</svg>' +
+                '</div>' +
             '</div>' +
             '<div class="forecastDay">' +
                 '<div class="forecastText">' + weekday[tomorrow2.getDay()] + '</div>' +
                 '<div class="forecastTemperature">' + tomorrowLow2 + ' <sup>&#8451;</sup> / ' + tomorrowHigh2 + ' <sup>&#8451;</sup></div>' +
-                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[2].icon + '.svg"</div>' +
+                '<div class="forecastIcon">' +
+                    '<svg viewBox="0 0 75 75" class="weatherCurrentlyIcon">\n' +
+                    '   <use xlink:href="' + iconLocation + 'weather_sprite.svg#' + data.daily.data[2].icon + '"></use>\n' +
+                    '</svg>' +
+                '</div>' +
             '</div>' +
             '<div class="forecastDay">' +
                 '<div class="forecastText">' + weekday[tomorrow3.getDay()] + '</div>' +
                 '<div class="forecastTemperature">' + tomorrowLow3 + ' <sup>&#8451;</sup> / ' + tomorrowHigh3 + ' <sup>&#8451;</sup></div>' +
-                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[3].icon + '.svg"</div>' +
+                '<div class="forecastIcon">' +
+                    '<svg viewBox="0 0 75 75" class="weatherCurrentlyIcon">\n' +
+                    '   <use xlink:href="' + iconLocation + 'weather_sprite.svg#' + data.daily.data[3].icon + '"></use>\n' +
+                    '</svg>' +
+                '</div>' +
             '</div>' +
             '<div class="forecastDay">' +
                 '<div class="forecastText">' + weekday[tomorrow4.getDay()] + '</div>' +
                 '<div class="forecastTemperature">' + tomorrowLow4 + ' <sup>&#8451;</sup> / ' + tomorrowHigh4 + ' <sup>&#8451;</sup></div>' +
-                '<div class="forecastIcon"><img src="' + iconLocation + data.daily.data[4].icon + '.svg"</div>' +
+                '<div class="forecastIcon">' +
+                    '<svg viewBox="0 0 75 75" class="weatherCurrentlyIcon">\n' +
+                    '   <use xlink:href="' + iconLocation + 'weather_sprite.svg#' + data.daily.data[4].icon + '"></use>\n' +
+                    '</svg>' +
+                '</div>' +
             '</div>' +
         '</div>');
 });

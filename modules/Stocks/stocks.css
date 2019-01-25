@@ -11,10 +11,10 @@
     line-height: 15px;
 }
 
-.stockSymbol{
+.stockSymbol {
     float: left;
     text-transform: uppercase;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 .stockItemTable{
