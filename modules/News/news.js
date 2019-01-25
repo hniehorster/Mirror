@@ -30,8 +30,6 @@ function grabNews() {
 
         $('.newsItems').empty();
 
-        console.log(data);
-
         var items = [];
         var counter = 0;
         $.each(data.articles, function (index, element) {
@@ -58,7 +56,7 @@ function grabNews() {
                 '<div class="newsItem">' +
                 '<div class="newsImage"><img src="' + item.image + '" /></div>' +
                 '<div class="newsTitle defaultText"><p>' + item.title + '</p></div>' +
-                '<div class="newsUpdated smallSubText"><p>' + item.updated + '</p></div>' +
+                '<div class="newsUpdated tinySubText"><p>' + item.updated + '</p></div>' +
                 '<div id="additionalNewsData" data-description="' + item.description + '"></div>' +
                 '</div>'
             );
@@ -74,7 +72,7 @@ function grabNews() {
             '<div class="app_content">' +
             '<div class="newsItemImage mrD mbD"><img src="" class="mrD mbD" /></div>' +
             '<div class="newsItemTitle mediumText"></div>' +
-            '<div class="newsItemDate smallSubText mtD mbD"></div>' +
+            '<div class="newsItemDate tinySubText mtD mbD"></div>' +
             '<div class="newsItemDescription defaultText"></div>' +
             '</div>' +
             '</div>');

@@ -36,9 +36,9 @@
 }
 
 .newsItemImage img {
-    width: 100px;
+    width: 400px;
     height: auto;
-    float: left;
+    border-radius: 5px;
 }
 
 .newsItemDate{
@@ -48,4 +48,7 @@
 
 .newsItemDescription{
     width: 100%;
+}
+.newsItemTitle{
+    font-weight: 500;
 }
