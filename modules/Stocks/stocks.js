@@ -5,13 +5,19 @@
 /** SETTINGS **/
 
 var apiEndpoint = "https://api.iextrading.com/1.0/stock/market/batch?types=quote&symbols=";
-var assets = ['AAPL','SHOP','FIT','TWTR','FB','MT.AS','ING.AS'];
+var assets = ['AAPL','SHOP','FIT','TWTR','FB','SQ','NVDA','TSLA','ZUO','MDB'];
 var refreshInterval = 5000;
 
 /** END settings **/
 
 $("#Stocks > div.app_content").html('<div class="stocksWidget">' +
-    '<div class="stockItems"></div>'+
+        '<div class="stockItems">' +
+            '<table class="stockItemTable">' +
+                '<tr>' +
+                    '<td>Loading</td>' +
+                '</tr>' +
+            '</table>' +
+        '</div>'+
     '</div>');
 
 //build Stock Data URL
@@ -25,7 +31,7 @@ function grabStockData(){
         $.ajax({url: stocksURL, type:'GET', dataType: 'jsonp'})
     ).then(function(data, textStatus, jqXHR){
 
-        $('.stockItems').empty();
+        $('.stockItemTable').empty();
 
         console.log(data);
 
@@ -50,13 +56,13 @@ function grabStockData(){
                 stockChangePercentClassYTD  = "negative";
             }
 
-            $('.stockItems').append('' +
-                '<div class="stockItem">' +
-                    '<div class="stockSymbol">' + stock.symbol + ' </div>' +
-                    '<div class="stockCurrentPrice">' + stock.currentPrice + '</div>' +
-                    '<div class="stockChangePercent"><span class="' + stockChangePercentClass + '">' + stock.changePercent + ' %</span></div>' +
-                    '<div class="stockChangePercentYTD"><span class="' + stockChangePercentClassYTD +'">' + stock.ytdChange + ' %</span></div>' +
-                '</div>');
+            $('.stockItemTable').append('' +
+                '<tr>' +
+                    '<td class="stockSymbol">' + stock.symbol + ' </td>' +
+                    '<td class="stockCurrentPrice">' + stock.currentPrice + '</td>' +
+                    '<td class="stockChangePercent smallSubText"><span class="' + stockChangePercentClass + '">' + stock.changePercent + ' %</span></td>' +
+                    '<td class="stockChangePercentYTD smallSubText"><span class="' + stockChangePercentClassYTD +'">' + stock.ytdChange + ' % YTD</span></td>' +
+                '</tr>');
         });
     });
 

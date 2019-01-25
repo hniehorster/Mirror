@@ -14,22 +14,32 @@
 .stockSymbol{
     float: left;
     text-transform: uppercase;
+    font-weight: 400px;
+}
+
+.stockItemTable{
+    width: 100%;
 }
 
 .stockCurrentPrice{
-    float: left;
+    text-align: right;
+    font-weight: 200;
 }
 
 .stockChangePercent{
-    float: right;
+    text-align: right;
+    font-weight: 200;
 }
 .stockChangePercentYTD{
-    float: right;
+    text-align: right;
+    font-weight: 200;
 }
 
 .stockChangePercent span, .stockChangePercentYTD span{
     border-radius: 3px;
+    padding: 4px;
     color: #fff;
+    display: inline-block;
 }
 
 .stockChangePercent span.negative, .stockChangePercentYTD span.negative{
