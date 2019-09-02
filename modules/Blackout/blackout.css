@@ -8,3 +8,13 @@
     left: 0px;
     z-index: 10000000000000;
 }
+
+.blackoutButton{
+    z-index: 1000000;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 150px;
+    height: 150px;
+    background-color: #FF9600;
+}
