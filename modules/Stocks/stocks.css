@@ -1,6 +1,4 @@
 #Stocks, #stockItems{
-    background: #000 !important;
-    border:0px;
 }
 
 .stockItem{
@@ -48,4 +46,23 @@
 
 .stockChangePercent span.positive, .stockChangePercentYTD span.positive{
     background-color: #4DB48E;
+}
+
+/* STOCK ITEM DATA */
+
+.stockItemGraphData, .stockItemDailyData{
+    width: 100%;
+}
+.stockItemDailyDataCol1, .stockItemDailyDataCol2, .stockItemDailyDataCol3{
+    float:left;
+    width:31%;
+}
+.stockItemDailyDataCol1, .stockItemDailyDataCol2{
+    margin: 0px 5px 0px 0px;
+}
+
+.stockItemDataSource{
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
 }

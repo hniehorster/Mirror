@@ -38,16 +38,16 @@ function grabNews() {
                 return false;
             }
 
-            console.log('Element found ' + index + element);
+            //console.log('Element found ' + index + element);
 
             var item = {};
-            item.title = element.title;
-            item.description = element.content;
-            item.image = element.urlToImage;
-            item.source = element.source;
+            item.title          = element.title;
+            item.description    = element.content;
+            item.image          = element.urlToImage;
+            item.source         = element.source;
 
             //item.updated = cleanUpdated.getDate() + " "+cleanUpdated.getTime();
-            item.updated = item.updated = $(this).find('pubDate').eq(0).text();
+            item.updated        = item.updated = $(this).find('pubDate').eq(0).text();
 
             items.push(item);
 
@@ -66,19 +66,22 @@ function grabNews() {
         });
 
 
-        $(".container").append('' +
-            '<div class="ui-widget-content" id="NewsItems" style="display: none; width: 400px; height: 400px;">' +
-            '<img src="images/x.png" id="close_app" />' +
-            '<div class="app_content">' +
-            '<div class="newsItemImage mrD mbD"><img src="" class="mrD mbD" /></div>' +
-            '<div class="newsItemTitle mediumText"></div>' +
-            '<div class="newsItemDate tinySubText mtD mbD"></div>' +
-            '<div class="newsItemDescription defaultText"></div>' +
-            '</div>' +
-            '</div>');
+        if($('#itemContent').length){}else{
 
-        $("#NewsItems").draggable();
+            $(".container").append('' +
+                '<div class="ui-widget-content" id="itemContent" style="display: none; width: 400px; height: 400px;">' +
+                '<img src="images/x.png" id="close_app" />' +
+                '<div class="app_content">' +
+                '<div class="newsItemTitle largeText"></div>' +
+                '<div class="newsItemImage mrD mbD"><img src="" class="mrD mbD" /></div>' +
+                '<div class="newsItemDate tinySubText mtD mbD"></div>' +
+                '<div class="newsItemDescription defaultText"></div>' +
+                '</div>' +
+                '</div>');
+        }
+
     });
+    $("#itemContent").draggable();
 }
 
 grabNews();
@@ -102,6 +105,6 @@ $(document).on('click','.newsItem', function()
     $(".newsItemDescription").text(newsDescription);
     $(".newsItemDate").text(newsDate);
 
-    $("#NewsItems").show();
+    $("#itemContent").show();
 
 });
