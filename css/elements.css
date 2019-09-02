@@ -3,10 +3,11 @@
     height: 150px;
     padding: 0.5em;
     background-color: #000;
+
 }
 div.app_title{
     width:100%;
-    border-bottom: 1px #303030 solid;
+    margin:4px;
 }
 
 div.app_title h3{
@@ -36,8 +37,26 @@ div.app_content{
     font-size: 8px;
     font-weight: 200;
 }
+.largeText{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.bold{
+    font-weight: 400;
+}
+
+.shadowed{
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
 
 /** appContainer Styles **/
+.ui-widget-content{
+    background: rgba(0,0,0,0.7) !important;
+    padding: 6px;
+    border-radius: 6px;
+    border:0px;
+}
 
 /** DEFAULT MARGINS **/
 .mtD{
@@ -51,4 +70,13 @@ div.app_content{
 }
 .mlD{
     margin-left: 8px;
+}
+
+/** HELPERS */
+
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
 }
