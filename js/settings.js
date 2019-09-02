@@ -16,7 +16,7 @@ $.getJSON("config/settings.json", function(json){
         console.info(appDetails);
 
         if(appDetails.is_app){
-            $( ".apps_container" ).append('<div class="app defaultText" data-app-div="' + appUniqueId + '">' +
+            $( ".apps_container" ).append('<div class="app defaultText shadowed" data-app-div="' + appUniqueId + '">' +
                 '<img src="modules/'+ appDetails.app_name +'/' + appDetails.app_icon + '" />' +
                 '<p>' + appDetails.app_name + '</p>' +
                 '</div>');
@@ -35,10 +35,11 @@ $.getJSON("config/settings.json", function(json){
                 appWindowHeight = "height: " + appDetails.main_window_height + "px;";
             }
 
+            //'<img src="images/x.png" id="close_app" />' +
+
             $( ".container").append('' +
                 '<div class="ui-widget-content" id="' + appUniqueId + '" style="' + appVisibility + appWindowWidth + appWindowHeight + '">' +
-                    '<img src="images/x.png" id="close_app" />' +
-                    '<div class="app_title">' +
+                    '<div class="app_title center">' +
                         '<h3>' + appDetails.app_name +'</h3>' +
                     '</div>' +
                     '<div class="app_content">' +
@@ -70,12 +71,18 @@ $.getJSON("config/settings.json", function(json){
 
     });
 })
-    .error(function() { alert("error"); });
+.error(function()
+{
+    alert("Could not properly load the settings.json");
+}
+);
 
 $(document).on('click','.app', function()
 {
     var appDiv = $(this).data('app-div');
     $("div[id^='" + appDiv + "']").toggle();
+
+
 
 });
 
@@ -88,3 +95,36 @@ $(document).on('click','#close_app', function()
 
     $(appDiv).toggle();
 });
+
+/** HELPER FUNCTIONS **/
+
+function addCommas(nStr) {
+    nStr += '';
+    var x = nStr.split('.');
+    var x1 = x[0];
+    var x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
+}
+
+function moneyFormat(labelValue)
+{
+    // Nine Zeroes for Billions
+    return Math.abs(Number(labelValue)) >= 1.0e+9
+
+        ? Math.abs(Number(labelValue)) / 1.0e+9 + "B"
+        // Six Zeroes for Millions
+        : Math.abs(Number(labelValue)) >= 1.0e+6
+
+            ? Math.abs(Number(labelValue)) / 1.0e+6 + "M"
+            // Three Zeroes for Thousands
+            : Math.abs(Number(labelValue)) >= 1.0e+3
+
+                ? Math.abs(Number(labelValue)) / 1.0e+3 + "K"
+
+                : Math.abs(Number(labelValue));
+
+}
