@@ -13,15 +13,13 @@ $.getJSON("config/settings.json", function(json){
         var d = new Date();
         var appUniqueId = appDetails.app_name;
 
-        console.info(appDetails);
-
         if(appDetails.is_app){
             $( ".apps_container" ).append('<div class="app defaultText shadowed" data-app-div="' + appUniqueId + '">' +
                 '<img src="modules/'+ appDetails.app_name +'/' + appDetails.app_icon + '" />' +
                 '<p>' + appDetails.app_name + '</p>' +
                 '</div>');
 
-            var appVisibility, appWindowWidth, appWindowHeight = "";
+            var appVisibility, appWindowWidth, appPosition, appWindowHeight = "";
 
             if(!appDetails.default_visibility){
                 appVisibility = "display:none;";
@@ -35,10 +33,37 @@ $.getJSON("config/settings.json", function(json){
                 appWindowHeight = "height: " + appDetails.main_window_height + "px;";
             }
 
+            if(appDetails.default_position){
+                var appPosition = "position:relative;";
+
+                var positions = appDetails.default_position.split("-");
+
+                switch(positions[0]){
+                    case "top":
+                        appPosition += "top: 15px;";
+                        break;
+                    case "middle":
+                        appPosition += "top:45%;";
+                        break;
+                    case "bottom":
+                        appPosition += "bottom: 131px;"; //includes the footer
+                        break;
+                }
+
+                switch(positions[1]){
+                    case "right":
+                        appPosition += "right:15px;";
+                        break;
+                    case "left":
+                        appPosition += "left:15px;";
+                        break;
+                }
+
+            }
             //'<img src="images/x.png" id="close_app" />' +
 
             $( ".container").append('' +
-                '<div class="ui-widget-content" id="' + appUniqueId + '" style="' + appVisibility + appWindowWidth + appWindowHeight + '">' +
+                '<div class="ui-widget-content" id="' + appUniqueId + '" style="' + appVisibility + appWindowWidth + appWindowHeight + appPosition + '">' +
                     '<div class="app_title center">' +
                         '<h3>' + appDetails.app_name +'</h3>' +
                     '</div>' +
