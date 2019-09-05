@@ -7,14 +7,14 @@
 /********* SETTINGS **********/
 
 var googleNewsAPIKey    = "3a7373730ccc41d5bf43555a596dd0e8";
-var newsURLBase         = "https://newsapi.org/v2/top-headlines?country=nl&apiKey=";
+var newsURLBase         = "https://newsapi.org/v2/top-headlines?domains=nu.nl,telegraaf.nl&country=nl&apiKey=";
 var itemCount           = 7;
 var refreshRate         = 5000;
 
 /******** END SETTINGS **********/
 
 $("#News > div.app_content").html('<div class="newsWidget">' +
-        '<div class="newsItems"></div>'+
+    '<div class="newsItems"></div>'+
     '</div>');
 
 var newsURL = newsURLBase + googleNewsAPIKey;
@@ -27,6 +27,8 @@ function grabNews() {
         //$.ajax({url: newsURL, type: 'GET', dataType: 'json'})
         $.getJSON(newsURL)
     ).then(function (data, textStatus, jqXHR) {
+
+        console.log(data);
 
         $('.newsItems').empty();
 
