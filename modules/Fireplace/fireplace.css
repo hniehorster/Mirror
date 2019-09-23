@@ -1,0 +1,24 @@
+#Fireplace{
+    position: absolute !important;
+    top: -6px;
+    left: -6px;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 9999999999;
+}
+
+#FireplaceSrc{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position:absolute;
+}
+
+#FireplaceClose{
+    position: absolute !important;
+    top: -6px;
+    left: -6px;
+    width: 100% !important;
+    height: 200px;
+    z-index: 10000000000;
+}
