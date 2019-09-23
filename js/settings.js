@@ -1,5 +1,6 @@
 var settings        = "";
 var draggables      = [];
+var mirror          = [];
 
 console.log('test');
 
@@ -62,14 +63,28 @@ $.getJSON("config/settings.json", function(json){
             }
             //'<img src="images/x.png" id="close_app" />' +
 
-            $( ".container").append('' +
+
+            var appScreen = '<div class="ui-widget-content" id="' + appUniqueId + '" style="' + appVisibility + appWindowWidth + appWindowHeight + appPosition + '">';
+
+            if(appDetails.show_app_title  !== !1){
+                appScreen += '<div class="app_title center">' +
+                    '<h3>' + appDetails.app_name +'</h3>' +
+                    '</div>';
+            }
+
+            appScreen += '<div class="app_content"></div>';
+            appScreen += '</div>';
+
+            $(".container").append(appScreen);
+
+            /*$( ".container").append('' +
                 '<div class="ui-widget-content" id="' + appUniqueId + '" style="' + appVisibility + appWindowWidth + appWindowHeight + appPosition + '">' +
                     '<div class="app_title center">' +
                         '<h3>' + appDetails.app_name +'</h3>' +
                     '</div>' +
                     '<div class="app_content">' +
                     '</div>' +
-                '</div>');
+                '</div>');*/
 
             $("#" + appUniqueId + "").draggable();
         }else{
@@ -105,20 +120,45 @@ $.getJSON("config/settings.json", function(json){
 $(document).on('click','.app', function()
 {
     var appDiv = $(this).data('app-div');
-    $("div[id^='" + appDiv + "']").toggle();
 
+    if($("div[id^='" + appDiv + "']").css('display') == 'none'){
 
+        openApp(appDiv);
+
+    }else if($("div[id^='" + appDiv + "']").css('display') == 'block'){
+
+        closeApp(appDiv);
+    }
+
+    $( document ).trigger(customEvent);
+
+    console.log("Custom Event: " + customEvent);
 
 });
 
-$(document).on('click','#close_app', function()
-{
-    var appDiv = $(this).closest('div');
+function closeApp(appDiv){
 
-    console.log(appDiv);
-    console.log(this);
+    $("div[id^='" + appDiv + "']").hide();
+    var customEvent = appDiv + ':close';
 
-    $(appDiv).toggle();
+    $( document ).trigger(customEvent);
+
+}
+
+function openApp(appDiv){
+
+    $("div[id^='" + appDiv + "']").show();
+    var customEvent = appDiv + ':open';
+
+    $( document ).trigger(customEvent);
+}
+
+// Closing App Sub Divs Through the Close Icon
+$(document).on('click','#close_app', function() {
+
+    var appDiv = $(this).closest('div').attr('id');
+    closeApp(appDiv);
+
 });
 
 /** HELPER FUNCTIONS **/
