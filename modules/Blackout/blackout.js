@@ -2,7 +2,7 @@ var blackOutTimer   = 0;
 var blackOutActive  = true;
 var blackoutOffset  = 45;
 
-$(".container").append('<div class="blackoutButton">Hi</div>');
+$(".container").append('<div class="blackoutButton"></div>');
 
 $(document).on('click','body', function(){
 
