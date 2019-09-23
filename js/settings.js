@@ -129,28 +129,22 @@ $(document).on('click','.app', function()
 
         closeApp(appDiv);
     }
-
-    $( document ).trigger(customEvent);
-
-    console.log("Custom Event: " + customEvent);
-
 });
 
 function closeApp(appDiv){
 
     $("div[id^='" + appDiv + "']").hide();
     var customEvent = appDiv + ':close';
-
     $( document ).trigger(customEvent);
-
+    console.log(customEvent);
 }
 
 function openApp(appDiv){
 
     $("div[id^='" + appDiv + "']").show();
     var customEvent = appDiv + ':open';
-
     $( document ).trigger(customEvent);
+    console.log(customEvent);
 }
 
 // Closing App Sub Divs Through the Close Icon

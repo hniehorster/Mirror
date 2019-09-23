@@ -1,35 +1,53 @@
 {
   "modules": {
-    "youtube": {
-      "app_name": "Youtube",
-      "app_icon": "youtube.jpg",
-      "main_window_width": 1024,
-      "main_window_height": 600,
+    "buienradar": {
+      "app_name": "Buienradar",
+      "app_icon": "buienradar.jpg",
+      "main_window_width": 550,
+      "main_window_height": 513,
       "default_visibility": false,
+      "show_app_title": true,
+      "default_position": "bottom-right",
+      "external": {
+        "script": "buienradar.js",
+        "css": "buienradar.css"
+      },
       "is_app": true
     },
-    "google": {
-      "app_name": "Google",
-      "app_icon": "google.jpg",
-      "main_window_width": 500,
-      "main_window_height": 500,
+    "beachCam": {
+      "app_name": "BeachCam",
+      "app_icon": "Beachcam.jpg",
+      "main_window_width": 1120,
+      "main_window_height": 349,
       "default_visibility": false,
+      "show_app_title": true,
+      "default_position": "bottom-right",
+      "external": {
+        "script": "beachcam.js",
+        "css": "beachcam.css"
+      },
       "is_app": true
     },
-    "sonos": {
-      "app_name": "Sonos",
-      "app_icon": "sonos.jpg",
-      "main_window_width": 500,
-      "main_window_height": 500,
+    "home": {
+      "app_name": "Home",
+      "app_icon": "home.jpg",
+      "main_window_width": 550,
+      "main_window_height": 512,
       "default_visibility": false,
+      "external": {
+        "script": "hoome.js",
+        "css": "home.css"
+      },
       "is_app": true
     },
     "time": {
       "app_name": "Clock",
       "app_icon": "Clock.png",
       "main_window_width": 200,
-      "main_window_height": 150,
+      "main_window_height": 58,
       "default_visibility": false,
+      "show_app_title": false,
+      "default_position": "middle-left",
       "external": {
         "script": "clock.js",
         "css": "clock.css"
@@ -52,8 +70,9 @@
       "app_name": "Weather",
       "app_icon": "weather.png",
       "main_window_width": 300,
-      "main_window_height": 300,
+      "main_window_height": 415,
       "default_visibility": false,
+      "default_position": "bottom-left",
       "external": {
         "script": "weather.js",
         "css": "weather.css"
@@ -64,11 +83,23 @@
       "app_name": "News",
       "app_icon": "nu.jpg",
       "main_window_width": 300,
-      "main_window_height": 300,
+      "main_window_height": 500,
       "default_visibility": false,
       "external": {
         "script": "news.js",
         "css": "news.css"
+      },
+      "is_app": true
+    },
+    "Nest": {
+      "app_name": "Nest",
+      "app_icon": "nest.jpg",
+      "main_window_width": 300,
+      "main_window_height": 300,
+      "default_visibility": false,
+      "external": {
+        "script": "nest.js",
+        "css": "nest.css"
       },
       "is_app": true
     },
@@ -83,6 +114,27 @@
         "css": "stocks.css"
       },
       "is_app": true
+    },
+    "Fireplace": {
+      "app_name": "Fireplace",
+      "app_icon": "Fireplace.png",
+      "main_window_width": 300,
+      "main_window_height": 300,
+      "default_visibility": false,
+      "show_app_title": false,
+      "external": {
+        "script": "fireplace.js",
+        "css": "fireplace.css"
+      },
+      "is_app": true
+    },
+    "imageWallpaper":{
+      "app_name": "ImageWallpaper",
+      "external": {
+        "script": "imagewallpaper.js",
+        "css": "imagewallpaper.css"
+      },
+      "is_app": false
     },
     "blackout":{
       "app_name": "Blackout",

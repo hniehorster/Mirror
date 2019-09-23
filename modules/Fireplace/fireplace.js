@@ -1,6 +1,6 @@
 //?autoplay=1&showinfo=0&controls=0
 
-var videoURL = "https://www.youtube.com/embed/ZY3J3Y_OU0w/?autoplay=1&controls=0"
+var videoURL = "https://www.youtube.com/embed/ZY3J3Y_OU0w/?autoplay=1&mute=1&controls=0"
 
 $("#Fireplace > div.app_content").html('' +
     '<div id="FireplaceClose">' +
