@@ -77,7 +77,9 @@ function grabStocksData(){
             '<img src="images/x.png" id="close_app" />' +
             '<div class="app_content">' +
                 '<div class="stockSymbolTitle largeText bold center">LOADING DATA...</div>' +
-                '<div class="stockItemGraphData"></div>' +
+                '<div class="stockItemGraphData">' +
+                    '<div id="chartContainer" style="height: 200px; width: 100%;"></div>'+
+                '</div>' +
                 '<div class="stockItemDailyData">' +
                     '<div class="stockItemDailyDataCol1 defaultText">' +
                         '<table style="width: 100%;">' +
@@ -106,8 +108,44 @@ function grabStocksData(){
             '</div>');
 
         $("#stockItemContent").draggable();
+
+
+
+        $(document).on('stockItemContent:open', function(){
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light2",
+                backgroundColor: "transparent",
+                height: 200,
+                axisY:{
+                    includeZero: false,
+                    titleFontColor: "white"
+                },
+                data: [{
+                    type: "area",
+                    dataPoints: [
+                        { y: 450 },
+                        { y: 414},
+                        { y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+                        { y: 460 },
+                        { y: 450 },
+                        { y: 500 },
+                        { y: 480 },
+                        { y: 480 },
+                        { y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+                        { y: 500 },
+                        { y: 480 },
+                        { y: 510 }
+                    ]
+                }]
+            });
+            chart.render();
+        });
+
     });
 }
+
 
 function grabIntraData(stockSymbol){
 
@@ -136,6 +174,9 @@ setInterval(grabStocksData(), refreshInterval);
 
 $(document).on('click','.stockRow', function(){
 
+    var customEvent = 'stockItemContent:open';
+    $( document ).trigger(customEvent);
+
     var stockSymbol = $(this).data('stock-symbol');
 
     var stockData = baseURL + '/' + apiVersion + '/' +stockURL + stockSymbol + '&token=' + IEXToken;
@@ -144,7 +185,7 @@ $(document).on('click','.stockRow', function(){
         $.ajax({url: stockData, type:'GET', dataType: 'jsonp'})
     ).then(function(data, textStatus, jqXHR) {
 
-        var stockDataResult = data[stockSymbol].quote;
+        var stockDataResult = data[stockSymbol].quote; n
 
         console.log(stockDataResult);
 
@@ -181,3 +222,10 @@ $(document).on('click','.stockRow', function(){
    $("#stockItemContent").show();
 
 });
+
+// Load Remote JS
+
+var s = document.createElement("script");
+s.type = "text/javascript";
+s.src = "https://canvasjs.com/assets/script/canvasjs.min.js";
+$("body").append(s);
