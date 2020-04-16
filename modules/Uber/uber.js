@@ -1,0 +1,2 @@
+
+$("#Uber > div.app_content").html('<iframe id="UberMainFrame" src="https://m.uber.com/?action=setPickup&pickup=my_location&dropoff%5Bformatted_address%5D=Uber%20HQ%2C%20Market%20Street%2C%20San%20Francisco%2C%20CA%2C%20USA&dropoff%5Blatitude%5D=37.775231&dropoff%5Blongitude%5D=-122.417528"></iframe>');

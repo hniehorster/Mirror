@@ -94,15 +94,23 @@ $.getJSON("config/settings.json", function(json){
         //load remote scripts
         if(appDetails.external){
 
-            console.log(appDetails.external.script +" Script");
+            var externalJSScripts = appDetails.external.script;
+            externalJSScripts = externalJSScripts.split(",");
 
-            jQuery.getScript("modules/"+appDetails.app_name+"/"+appDetails.external.script+"?window_id="+appUniqueId)
-                .done(function() {
-                    console.log('Remote Script loaded');
-                })
-                .fail(function() {
-                    console.log("Not loaded, failed")
-                });
+            $.each(externalJSScripts, function (i, index){
+
+                var scriptURL = "modules/"+appDetails.app_name+"/" + index + "?window_id=" + appUniqueId;
+
+                jQuery.getScript(scriptURL)
+                    .done(function() {
+                        console.log('Remote Script loaded: ' + scriptURL);
+                    })
+                    .fail(function() {
+                        console.log('Not loaded, failed: ' + scriptURL);
+                    });
+            });
+
+
 
             if(appDetails.external.css){
                 $('head').append('<link id="' + appDetails.app_name + '_css" href="modules/' + appDetails.app_name + '/'  + appDetails.external.css + '" type="text/css" rel="stylesheet" />');

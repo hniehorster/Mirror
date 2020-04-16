@@ -45,6 +45,7 @@ footer .app{
     color: #fff;
     display: inline-block;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 footer .app img{
@@ -55,4 +56,8 @@ footer .app img{
 
 .ui-widget-content{
  position: absolute !important;
+}
+
+.app_title{
+    cursor: grab;
 }
