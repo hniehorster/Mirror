@@ -26,16 +26,20 @@
         "script": "beachcam.js",
         "css": "beachcam.css"
       },
-      "is_app": true
+      "is_app": true,
+      "config" : {
+        "beachTest" : "testen vande config",
+        "settings" : 123123
+      }
     },
     "home": {
       "app_name": "Home",
       "app_icon": "home.jpg",
-      "main_window_width": 550,
-      "main_window_height": 512,
+      "main_window_width": 1500,
+      "main_window_height": 700,
       "default_visibility": false,
       "external": {
-        "script": "hoome.js",
+        "script": "home.js",
         "css": "home.css"
       },
       "is_app": true
@@ -45,24 +49,12 @@
       "app_icon": "Clock.png",
       "main_window_width": 200,
       "main_window_height": 58,
-      "default_visibility": false,
+      "default_visibility": true,
       "show_app_title": false,
-      "default_position": "middle-left",
+      "default_position": "top-left",
       "external": {
         "script": "clock.js",
         "css": "clock.css"
-      },
-      "is_app": true
-    },
-    "calendar": {
-      "app_name": "Calendar",
-      "app_icon": "calendar.png",
-      "main_window_width": 500,
-      "main_window_height": 500,
-      "default_visibility": false,
-      "external": {
-        "script": "calendar.js",
-        "css": "calendar.css"
       },
       "is_app": true
     },
@@ -72,24 +64,40 @@
       "main_window_width": 300,
       "main_window_height": 415,
       "default_visibility": false,
-      "default_position": "bottom-left",
+      "default_position": "top-right",
       "external": {
         "script": "weather.js",
         "css": "weather.css"
       },
       "is_app": true
     },
+    "Health": {
+      "app_name": "Health",
+      "app_icon": "health.png",
+      "main_window_width": 300,
+      "main_window_height": 500,
+      "default_visibility": false,
+      "default_position": "middle-right",
+      "external": {
+        "script": "health.js",
+        "css": "health.css"
+      },
+      "is_app": true
+    },
     "News": {
       "app_name": "News",
       "app_icon": "nu.jpg",
-      "main_window_width": 300,
+      "main_window_width": 400,
       "main_window_height": 500,
       "default_visibility": false,
       "external": {
         "script": "news.js",
         "css": "news.css"
       },
-      "is_app": true
+      "is_app": true,
+      "config": {
+        "news_api_key": "3a7373730ccc41d5bf43555a596dd0e8"
+      }
     },
     "Nest": {
       "app_name": "Nest",
@@ -113,7 +121,11 @@
         "script": "stocks.js",
         "css": "stocks.css"
       },
-      "is_app": true
+      "is_app": true,
+      "vars": {
+        "client_id": "2f5677eb2c35fa628c3f677497377344",
+        "client_secret": "f8852310b4ab0f2680de8d7960318182455d9609"
+      }
     },
     "Fireplace": {
       "app_name": "Fireplace",
@@ -134,7 +146,14 @@
         "script": "imagewallpaper.js",
         "css": "imagewallpaper.css"
       },
-      "is_app": false
+      "is_app": false,
+      "vars": {
+        "access_key": "6CXR8TNbm4l1nNUjRUwtn4e12Tg_D2F2O3cPMYQ2uUQ",
+        "search_query": "nature",
+        "background_color" : "#333",
+        "background_opacity" : 0.7
+      }
+
     },
     "blackout":{
       "app_name": "Blackout",
@@ -143,6 +162,74 @@
         "css": "blackout.css"
       },
       "is_app": false
+    },
+    "notify":{
+      "app_name": "Notify",
+      "external": {
+        "script": "notify.js"
+      },
+      "is_app": false
+    },
+    "scenes": {
+      "app_name": "Scenes",
+      "app_icon": "scenes.png",
+      "main_window_width": 480,
+      "default_visibility": false,
+      "external": {
+        "script": "scenes.js",
+        "css": "scenes.css"
+      },
+      "is_app": true,
+      "config": {
+        "hassIOAuth": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI0MTNhNDNhYTJmY2M0ODBkYjdmMTdmM2M3MTI4NThlYiIsImlhdCI6MTYwMDg5MTI1NywiZXhwIjoxOTE2MjUxMjU3fQ.IVsoPHZ9yAKON8b4z9zM57oxEJ3Bom5praoQtfQJPC4",
+        "hassIOURL": "http://192.168.1.77:8123/api/",
+        "actionButtons" : {
+          "Scenes": [{
+              "location": "Living Room",
+              "action_name": "Lights Off",
+              "entity_id": "scene.lights_off",
+              "action": "turn_on",
+              "domain": "scene"
+          },
+          {
+              "location": "Downstairs",
+              "action_name": "Lights Off",
+              "entity_id": "scene.lights_off",
+              "action": "turn_on",
+              "domain": "scene"
+          },
+          {
+              "location": "Downstairs",
+              "action_name": "Lights Full",
+              "entity_id": "scene.lights_off",
+              "action": "turn_on",
+              "domain": "scene"
+          }],
+          "Lights": [
+            {
+              "location": "Master Bedroom",
+              "name": "Ceiling",
+              "entity_id": "light.master_ceiling",
+              "action" : "toggle",
+              "domain": "light"
+            },
+            {
+              "location": "Clothing Room",
+              "name": "Ceiling",
+              "entity_id": "light.clothing_ceiling",
+              "action" : "toggle",
+              "domain": "switch"
+            },
+            {
+              "location": "Bathroom Room",
+              "name": "Ceiling",
+              "entity_id": "light.bathroom_ceiling",
+              "action" : "toggle",
+              "domain": "switch"
+            }
+          ]
+        }
+      }
     }
   }
 }

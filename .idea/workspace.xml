@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="41b334cb-ac8d-43b1-a45a-d596f45a91e3" name="Default" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="41b334cb-ac8d-43b1-a45a-d596f45a91e3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/modules/Health/health.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Health/health.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Scenes/scenes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Scenes/scenes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/elements.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/elements.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/internal/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Beachcam/beachcam.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Beachcam/beachcam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Blackout/blackout.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blackout/blackout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Blackout/blackout.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blackout/blackout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Fireplace/fireplace.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Fireplace/fireplace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/ImageWallpaper/imagewallpaper.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ImageWallpaper/imagewallpaper.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/ImageWallpaper/imagewallpaper.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ImageWallpaper/imagewallpaper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/News/news.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/News/news.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/News/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/News/news.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/News/news2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/News/news3.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/News/news3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Stocks/stocks.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Stocks/stocks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Stocks/stocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Stocks/stocks.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -28,8 +68,15 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jsx.switch.disabled" value="true" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -37,19 +84,16 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules/Health" />
+      <recent name="$PROJECT_DIR$/js" />
+    </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -128,33 +172,83 @@
       <workItem from="1582195240662" duration="993000" />
       <workItem from="1582537172797" duration="471000" />
       <workItem from="1582557804720" duration="4000" />
+      <workItem from="1587133237878" duration="775000" />
+      <workItem from="1587136989707" duration="20000" />
+      <workItem from="1587642852939" duration="588000" />
+      <workItem from="1591099452253" duration="10135000" />
+      <workItem from="1591169059566" duration="2910000" />
+      <workItem from="1591268826900" duration="621000" />
+      <workItem from="1591276813422" duration="7380000" />
+      <workItem from="1591284551774" duration="78000" />
+      <workItem from="1591286908290" duration="283000" />
+      <workItem from="1591343051273" duration="136000" />
+      <workItem from="1591537801110" duration="3926000" />
+      <workItem from="1591718361620" duration="442000" />
+      <workItem from="1591799849505" duration="606000" />
+      <workItem from="1591800567598" duration="3072000" />
+      <workItem from="1591866075208" duration="885000" />
+      <workItem from="1593333080711" duration="999000" />
+      <workItem from="1598699134713" duration="1273000" />
+      <workItem from="1599658764154" duration="10876000" />
+      <workItem from="1599943374391" duration="343000" />
+      <workItem from="1599943749335" duration="7606000" />
+      <workItem from="1600892746211" duration="1747000" />
+      <workItem from="1600937203256" duration="584000" />
+      <workItem from="1600938127254" duration="363000" />
+      <workItem from="1600960610515" duration="1343000" />
+      <workItem from="1600970077139" duration="5042000" />
+      <workItem from="1601657077846" duration="764000" />
+      <workItem from="1601884550966" duration="826000" />
+      <workItem from="1603268846040" duration="103000" />
+      <workItem from="1604423669306" duration="141000" />
+      <workItem from="1604507162468" duration="994000" />
+      <workItem from="1604590775495" duration="1902000" />
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1249" y="573" key="#Plugins" timestamp="1600938585671">
+      <screen x="0" y="23" width="3200" height="1741" />
+    </state>
+    <state x="1249" y="573" key="#Plugins/-1440.23.1440.2537/0.23.3200.1741@0.23.3200.1741" timestamp="1600938585671" />
+    <state x="648" y="337" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599943773930">
+      <screen x="0" y="23" width="1920" height="1142" />
+    </state>
+    <state x="648" y="337" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1920.1142@0.23.1920.1142" timestamp="1599943773930" />
+    <state x="543" y="68" key="SettingsEditor" timestamp="1603268949635">
+      <screen x="0" y="23" width="1920" height="1141" />
+    </state>
+    <state x="1193" y="257" key="SettingsEditor/-1440.23.1440.2537/0.23.3200.1742@0.23.3200.1742" timestamp="1598699326609" />
+    <state x="543" y="68" key="SettingsEditor/0.23.1920.1141@0.23.1920.1141" timestamp="1603268949635" />
+    <state x="803" y="230" width="586" height="1122" key="dock-window-1" timestamp="1600509245699">
+      <screen x="0" y="23" width="1920" height="1142" />
+    </state>
+    <state x="803" y="230" width="586" height="1122" key="dock-window-1/0.23.1920.1142@0.23.1920.1142" timestamp="1600509245699" />
+    <state x="1238" y="654" width="947" height="748" key="find.popup" timestamp="1604591942750">
+      <screen x="0" y="23" width="3200" height="1741" />
+    </state>
+    <state x="1238" y="654" width="947" height="748" key="find.popup/-1440.-363.1440.2537/0.23.3200.1741@0.23.3200.1741" timestamp="1604591942750" />
+    <state x="1238" y="654" width="947" height="748" key="find.popup/-1440.23.1440.2537/0.23.3200.1741@0.23.3200.1741" timestamp="1600968871477" />
+    <state x="743" y="437" width="568" height="490" key="find.popup/0.23.1920.1142@0.23.1920.1142" timestamp="1599862448244" />
+    <state x="721" y="289" width="671" height="447" key="search.everywhere.popup" timestamp="1599751254208">
+      <screen x="0" y="23" width="1920" height="1142" />
+    </state>
+    <state x="721" y="289" width="671" height="447" key="search.everywhere.popup/0.23.1920.1142@0.23.1920.1142" timestamp="1599751254208" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,7 +8,7 @@ var baseURL         = "https://cloud.iexapis.com/";
 var stockURL        = "stock/market/batch?types=quote&symbols=";
 var intraURL        = "stock/[SYMBOL]/intraday-prices/";
 var apiVersion      = "stable";
-var assets          = ['AAPL','SHOP','FIT','TWTR','FB','SQ','NVDA','TSLA','ZUO','MDB'];
+var assets          = ['MSFT','SHOP','BIGC','SQ','LSPD'];
 var IEXToken        = "sk_57c881be33e94dae91b38cb538afbbed";
 var refreshInterval = 5000;
 
@@ -27,6 +27,7 @@ $("#Stocks > div.app_content").html('<div class="stocksWidget">' +
 //build Stock Data URL
 
 var stocksURL = baseURL + '/' + apiVersion + '/' +stockURL + assets.join() + '&token=' + IEXToken;
+//var stocksURL = "https://query1.finance.yahoo.com/v7/finance/quote?symbols=rdsa.as,aapl,shop,lspd.to";
 
 console.log(stocksURL);
 
@@ -66,13 +67,13 @@ function grabStocksData(){
                 '<tr data-stock-symbol="' + stock.symbol + '" class="stockRow">' +
                 '<td class="stockSymbol">' + stock.symbol + ' </td>' +
                 '<td class="stockCurrentPrice">' + stock.currentPrice + '</td>' +
-                '<td class="stockChangePercent smallSubText"><span class="' + stockChangePercentClass + '">' + stock.changePercent + ' %</span></td>' +
-                '<td class="stockChangePercentYTD smallSubText"><span class="' + stockChangePercentClassYTD + '">' + stock.ytdChange + ' % YTD</span></td>' +
+                '<td class="stockChangePercent"><span class="' + stockChangePercentClass + '">' + stock.changePercent + ' %</span></td>' +
+                '<td class="stockChangePercentYTD"><span class="' + stockChangePercentClassYTD + '">' + stock.ytdChange + ' % YTD</span></td>' +
                 '</tr>');
         });
 
 
-        $(".container").append('' +
+        /*$(".container").append('' +
             '<div class="ui-widget-content" id="stockItemContent" style="display: none; width: 500px; height: 300px;">' +
             '<img src="images/x.png" id="close_app" />' +
             '<div class="app_content">' +
@@ -106,7 +107,12 @@ function grabStocksData(){
                 '<div class="stockItemDataSource smallSubText"></div>' +
             '</div>' +
             '</div>');
+        */
 
+        $(".container").append('' +
+            '<div class="ui-widget-content" id="stockItemContent" style="display: none; width: 500px; height: 300px;">' +
+            '</div>'
+        );
         $("#stockItemContent").draggable();
 
 
@@ -185,7 +191,7 @@ $(document).on('click','.stockRow', function(){
         $.ajax({url: stockData, type:'GET', dataType: 'jsonp'})
     ).then(function(data, textStatus, jqXHR) {
 
-        var stockDataResult = data[stockSymbol].quote; n
+        var stockDataResult = data[stockSymbol].quote;
 
         console.log(stockDataResult);
 

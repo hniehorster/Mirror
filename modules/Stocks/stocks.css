@@ -41,11 +41,11 @@
 }
 
 .stockChangePercent span.negative, .stockChangePercentYTD span.negative{
-    background-color: #D41639;
+    color:#D41639;
 }
 
 .stockChangePercent span.positive, .stockChangePercentYTD span.positive{
-    background-color: #4DB48E;
+    color: #4DB48E;
 }
 
 /* STOCK ITEM DATA */

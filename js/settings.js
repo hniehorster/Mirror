@@ -1,8 +1,7 @@
 var settings        = "";
 var draggables      = [];
 var mirror          = [];
-
-console.log('test');
+var appSettings     = [];
 
 $.getJSON("config/settings.json", function(json){
 
@@ -13,6 +12,8 @@ $.getJSON("config/settings.json", function(json){
         var appDetails = json.modules[i];
         var d = new Date();
         var appUniqueId = appDetails.app_name;
+
+        localStorage.setItem(appDetails.app_name, JSON.stringify(appDetails));
 
         if(appDetails.is_app){
             $( ".apps_container" ).append('<div class="app defaultText shadowed" data-app-div="' + appUniqueId + '">' +
@@ -31,7 +32,9 @@ $.getJSON("config/settings.json", function(json){
             }
 
             if(appDetails.main_window_height){
-                appWindowHeight = "height: " + appDetails.main_window_height + "px;";
+                appWindowHeight = "min-height: " + appDetails.main_window_height + "px;";
+            }else{
+                appWindowHeight = "height: auto";
             }
 
             if(appDetails.default_position){
@@ -47,7 +50,7 @@ $.getJSON("config/settings.json", function(json){
                         appPosition += "top:45%;";
                         break;
                     case "bottom":
-                        appPosition += "bottom: 131px;"; //includes the footer
+                        appPosition += "bottom: 145px;"; //includes the footer
                         break;
                 }
 
@@ -77,15 +80,6 @@ $.getJSON("config/settings.json", function(json){
 
             $(".container").append(appScreen);
 
-            /*$( ".container").append('' +
-                '<div class="ui-widget-content" id="' + appUniqueId + '" style="' + appVisibility + appWindowWidth + appWindowHeight + appPosition + '">' +
-                    '<div class="app_title center">' +
-                        '<h3>' + appDetails.app_name +'</h3>' +
-                    '</div>' +
-                    '<div class="app_content">' +
-                    '</div>' +
-                '</div>');*/
-
             $("#" + appUniqueId + "").draggable();
         }else{
             console.info(appDetails.app_name + " is not an App");
@@ -99,24 +93,34 @@ $.getJSON("config/settings.json", function(json){
 
             $.each(externalJSScripts, function (i, index){
 
+                if(appDetails.config){
+                    console.log(appDetails.app_name);
+                    window.appSettings[appDetails.app_name] = appDetails.config;
+                    console.log(window);
+                }
+
                 var scriptURL = "modules/"+appDetails.app_name+"/" + index + "?window_id=" + appUniqueId;
 
                 jQuery.getScript(scriptURL)
                     .done(function() {
                         console.log('Remote Script loaded: ' + scriptURL);
+
+                        var appLaunch = appDetails.app_name + ':launch';
+                        $( document ).trigger(appLaunch);
+
                     })
-                    .fail(function() {
+                    .fail(function(jqxhr, settings, exception) {
                         console.log('Not loaded, failed: ' + scriptURL);
+                        console.warn(settings);
+                        console.warn(exception);
+
                     });
             });
-
-
 
             if(appDetails.external.css){
                 $('head').append('<link id="' + appDetails.app_name + '_css" href="modules/' + appDetails.app_name + '/'  + appDetails.external.css + '" type="text/css" rel="stylesheet" />');
             }
         }
-
     });
 })
 .error(function()
@@ -177,8 +181,7 @@ function addCommas(nStr) {
     return x1 + x2;
 }
 
-function moneyFormat(labelValue)
-{
+function moneyFormat(labelValue) {
     // Nine Zeroes for Billions
     return Math.abs(Number(labelValue)) >= 1.0e+9
 
@@ -194,4 +197,19 @@ function moneyFormat(labelValue)
 
                 : Math.abs(Number(labelValue));
 
+}
+
+function hexToRgb(hex) {
+    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+        return r + r + g + g + b + b;
+    });
+
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
 }

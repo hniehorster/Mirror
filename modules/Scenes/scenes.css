@@ -1,0 +1,36 @@
+.sceneTile{
+    border-radius: 6px;
+    background-color: #fff;
+    width: 150px;
+    height: 120px;
+    float: left;
+    margin: 5px;
+}
+
+.sceneTileHighlighted{
+    background-color: #D8D8D8;
+}
+
+/* Button Content */
+.sceneGroup{
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+.sceneAction{
+    font-weight: bold;
+    color: #595959;
+    position: relative;
+    top: 25px;
+    left: 10px;
+}
+ .sceneIcon{
+     color:#000 !important;
+     font-size: 37px;
+     position: relative;
+     top: 5px;
+     left: 10px;
+ }

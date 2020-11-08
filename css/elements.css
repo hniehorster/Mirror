@@ -81,3 +81,14 @@ div.app_content{
 .right{
     text-align: right;
 }
+
+.fl-left{
+    float:left;
+}
+.fl-right{
+    float:right;
+}
+
+.w-50{
+    width: 50%;
+}
