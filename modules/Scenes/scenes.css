@@ -1,3 +1,29 @@
+.groups{
+    float: left;
+    width: 15%;
+    height: 100%;
+}
+.actionButtons{
+    float: left;
+    width: 85%;
+}
+.groupItems {
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.groupItems li{
+    display: block;
+    border-radius: 6px;
+    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    color: #000;
+    margin-top: 5px;
+    font-size: 56px;
+    text-align:center;
+}
+
 .sceneTile{
     border-radius: 6px;
     background-color: #fff;

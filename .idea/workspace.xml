@@ -20,30 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41b334cb-ac8d-43b1-a45a-d596f45a91e3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/modules/Health/health.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Health/health.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Scenes/scenes.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Scenes/scenes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/elements.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/elements.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/internal/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Beachcam/beachcam.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Beachcam/beachcam.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Blackout/blackout.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blackout/blackout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Blackout/blackout.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Blackout/blackout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Fireplace/fireplace.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Fireplace/fireplace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Home/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ImageWallpaper/imagewallpaper.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ImageWallpaper/imagewallpaper.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ImageWallpaper/imagewallpaper.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ImageWallpaper/imagewallpaper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/News/news.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/News/news.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/News/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/News/news.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/News/news2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/News/news3.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/News/news3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Stocks/stocks.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Stocks/stocks.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Stocks/stocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Stocks/stocks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Scenes/scenes.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Scenes/scenes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Scenes/scenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Scenes/scenes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +46,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SBmLMyh8qiV9ANeYvTkH5C9SIE" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -203,6 +184,7 @@
       <workItem from="1604423669306" duration="141000" />
       <workItem from="1604507162468" duration="994000" />
       <workItem from="1604590775495" duration="1902000" />
+      <workItem from="1604843761844" duration="2519000" />
     </task>
     <servers />
   </component>

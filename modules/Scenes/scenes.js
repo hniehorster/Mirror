@@ -1,4 +1,3 @@
-console.log('SCENES');
 console.log(window);
 
 hassIOAuth  = window.appSettings['Scenes'].hassIOAuth;
@@ -8,6 +7,17 @@ actionButtons  = window.appSettings['Scenes'].actionButtons;
 console.log(actionButtons);
 
 $( "#Scenes > div.app_content" ).append('' +
+    '<div class="groups"></div>' +
+    '<div class="actionButtons"></div>');
+
+$( "#Scenes > div.app_content >div.groups" ).append('' +
+    '<ul class="groupItems">' +
+        '<li><i class="icon-lightbulb"></i></li>' +
+        '<li><i class="icon-fireplace"></i></li>' +
+    '</ul>'
+);
+
+$( "#Scenes > div.app_content >div.actionButtons" ).append('' +
     '<div class="sceneTile" data-tile-default-color="#fff">' +
         '<div class="sceneIcon"><i class="icon-lightbulb"></i></div>' +
         '<div class="sceneGroup" data-goup="Living Room">Downstairs</div>' +

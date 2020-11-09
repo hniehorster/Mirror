@@ -27,9 +27,9 @@
         "css": "beachcam.css"
       },
       "is_app": true,
-      "config" : {
-        "beachTest" : "testen vande config",
-        "settings" : 123123
+      "config": {
+        "beachTest": "testen vande config",
+        "settings": 123123
       }
     },
     "home": {
@@ -140,7 +140,7 @@
       },
       "is_app": true
     },
-    "imageWallpaper":{
+    "imageWallpaper": {
       "app_name": "ImageWallpaper",
       "external": {
         "script": "imagewallpaper.js",
@@ -150,12 +150,11 @@
       "vars": {
         "access_key": "6CXR8TNbm4l1nNUjRUwtn4e12Tg_D2F2O3cPMYQ2uUQ",
         "search_query": "nature",
-        "background_color" : "#333",
-        "background_opacity" : 0.7
+        "background_color": "#333",
+        "background_opacity": 0.7
       }
-
     },
-    "blackout":{
+    "blackout": {
       "app_name": "Blackout",
       "external": {
         "script": "blackout.js",
@@ -163,7 +162,7 @@
       },
       "is_app": false
     },
-    "notify":{
+    "notify": {
       "app_name": "Notify",
       "external": {
         "script": "notify.js"
@@ -183,51 +182,59 @@
       "config": {
         "hassIOAuth": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI0MTNhNDNhYTJmY2M0ODBkYjdmMTdmM2M3MTI4NThlYiIsImlhdCI6MTYwMDg5MTI1NywiZXhwIjoxOTE2MjUxMjU3fQ.IVsoPHZ9yAKON8b4z9zM57oxEJ3Bom5praoQtfQJPC4",
         "hassIOURL": "http://192.168.1.77:8123/api/",
-        "actionButtons" : {
-          "Scenes": [{
-              "location": "Living Room",
-              "action_name": "Lights Off",
-              "entity_id": "scene.lights_off",
-              "action": "turn_on",
-              "domain": "scene"
+        "actionButtons": {
+          "Scenes": {
+            "icon": "icon-fireplace",
+            "data": [
+              {
+                "location": "Living Room",
+                "action_name": "Lights Off",
+                "entity_id": "scene.lights_off",
+                "action": "turn_on",
+                "domain": "scene"
+              },
+              {
+                "location": "Downstairs",
+                "action_name": "Lights Off",
+                "entity_id": "scene.lights_off",
+                "action": "turn_on",
+                "domain": "scene"
+              },
+              {
+                "location": "Downstairs",
+                "action_name": "Lights Full",
+                "entity_id": "scene.lights_off",
+                "action": "turn_on",
+                "domain": "scene"
+              }
+            ]
           },
-          {
-              "location": "Downstairs",
-              "action_name": "Lights Off",
-              "entity_id": "scene.lights_off",
-              "action": "turn_on",
-              "domain": "scene"
-          },
-          {
-              "location": "Downstairs",
-              "action_name": "Lights Full",
-              "entity_id": "scene.lights_off",
-              "action": "turn_on",
-              "domain": "scene"
-          }],
-          "Lights": [
-            {
-              "location": "Master Bedroom",
-              "name": "Ceiling",
-              "entity_id": "light.master_ceiling",
-              "action" : "toggle",
-              "domain": "light"
-            },
-            {
-              "location": "Clothing Room",
-              "name": "Ceiling",
-              "entity_id": "light.clothing_ceiling",
-              "action" : "toggle",
-              "domain": "switch"
-            },
-            {
-              "location": "Bathroom Room",
-              "name": "Ceiling",
-              "entity_id": "light.bathroom_ceiling",
-              "action" : "toggle",
-              "domain": "switch"
-            }
-          ]
+          "Lights": {
+            "icon": "icon-lightbulb",
+            "data": [
+              {
+                "location": "Master Bedroom",
+                "name": "Ceiling",
+                "entity_id": "light.master_ceiling",
+                "action": "toggle",
+                "domain": "light"
+              },
+              {
+                "location": "Clothing Room",
+                "name": "Ceiling",
+                "entity_id": "light.clothing_ceiling",
+                "action": "toggle",
+                "domain": "switch"
+              },
+              {
+                "location": "Bathroom Room",
+                "name": "Ceiling",
+                "entity_id": "light.bathroom_ceiling",
+                "action": "toggle",
+                "domain": "switch"
+              }
+            ]
+          }
         }
       }
     }
