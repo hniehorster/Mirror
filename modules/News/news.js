@@ -3,9 +3,12 @@
  * TODO: hide image in overview if there is none
  */
 
+newsAppSettings = localStorage.getItem('News');
+newsAppSettings = JSON.parse(newsAppSettings);
+
 /********* SETTINGS **********/
 
-var googleNewsAPIKey    = window.appSettings['News'].news_api_key;
+var googleNewsAPIKey    = newsAppSettings.config.news_api_key;
 var newsURLBase         = "https://newsapi.org/v2/top-headlines?domains=nu.nl,telegraaf.nl&country=nl&apiKey=";
 var itemCount           = 10;
 var refreshRate         = 50000;

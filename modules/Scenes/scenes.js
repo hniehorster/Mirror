@@ -1,10 +1,10 @@
-console.log(window);
+scenesAppSettings = localStorage.getItem('Scenes');
+scenesAppSettings = JSON.parse(scenesAppSettings);
 
-hassIOAuth  = window.appSettings['Scenes'].hassIOAuth;
-hassIOURL   = window.appSettings['Scenes'].hassIOURL;
-actionButtons  = window.appSettings['Scenes'].actionButtons;
+var hassIOURL = scenesAppSettings.config.hassIOURL;
+var hassIOAuth = scenesAppSettings.config.hassIOAuth;
 
-console.log(actionButtons);
+console.log("HASS IO" + hassIOURL);
 
 $( "#Scenes > div.app_content" ).append('' +
     '<div class="groups"></div>' +

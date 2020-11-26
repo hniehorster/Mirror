@@ -43,21 +43,18 @@
 <body>
 <div class="body_layer">
     <div class="blackout"></div>
-        <div class="container">
+    <div class="container">
+        <style>
+            #draggable { width: 250px; height: 150px; padding: 0.5em; position: absolute;}
+        </style>
+        <script>
+            $(function() {
+                $( "#draggable" ).draggable();
+                $( "#draggables" ).draggable();
+            });
+        </script>
 
-
-            <style>
-                #draggable { width: 250px; height: 150px; padding: 0.5em; position: absolute;}
-            </style>
-            <script>
-                $(function() {
-                    $( "#draggable" ).draggable();
-                    $( "#draggables" ).draggable();
-                });
-            </script>
-
-            <div class="demo">
-            </div><!-- End demo -->
+        <div class="demo"></div><!-- End demo -->
     </div>
 
     <footer>

@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41b334cb-ac8d-43b1-a45a-d596f45a91e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/Scenes/scenes.css" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Scenes/scenes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/ImageWallpaper/imagewallpaper.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ImageWallpaper/imagewallpaper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/News/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/News/news.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Scenes/scenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Scenes/scenes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,6 +187,15 @@
       <workItem from="1604507162468" duration="994000" />
       <workItem from="1604590775495" duration="1902000" />
       <workItem from="1604843761844" duration="2519000" />
+      <workItem from="1605214996407" duration="544000" />
+      <workItem from="1605277016355" duration="480000" />
+      <workItem from="1605521616749" duration="570000" />
+      <workItem from="1605530368911" duration="518000" />
+      <workItem from="1605809706736" duration="189000" />
+      <workItem from="1606329860514" duration="303000" />
+      <workItem from="1606331279067" duration="39000" />
+      <workItem from="1606332844885" duration="429000" />
+      <workItem from="1606422825344" duration="1844000" />
     </task>
     <servers />
   </component>
@@ -221,11 +232,12 @@
       <screen x="0" y="23" width="1920" height="1142" />
     </state>
     <state x="803" y="230" width="586" height="1122" key="dock-window-1/0.23.1920.1142@0.23.1920.1142" timestamp="1600509245699" />
-    <state x="1238" y="654" width="947" height="748" key="find.popup" timestamp="1604591942750">
-      <screen x="0" y="23" width="3200" height="1741" />
+    <state x="743" y="435" width="574" height="516" key="find.popup" timestamp="1606424213137">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="1238" y="654" width="947" height="748" key="find.popup/-1440.-363.1440.2537/0.23.3200.1741@0.23.3200.1741" timestamp="1604591942750" />
     <state x="1238" y="654" width="947" height="748" key="find.popup/-1440.23.1440.2537/0.23.3200.1741@0.23.3200.1741" timestamp="1600968871477" />
+    <state x="743" y="435" width="574" height="516" key="find.popup/0.0.1920.1200@0.0.1920.1200" timestamp="1606424213137" />
     <state x="743" y="437" width="568" height="490" key="find.popup/0.23.1920.1142@0.23.1920.1142" timestamp="1599862448244" />
     <state x="721" y="289" width="671" height="447" key="search.everywhere.popup" timestamp="1599751254208">
       <screen x="0" y="23" width="1920" height="1142" />

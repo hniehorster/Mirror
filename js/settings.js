@@ -93,11 +93,18 @@ $.getJSON("config/settings.json", function(json){
 
             $.each(externalJSScripts, function (i, index){
 
-                if(appDetails.config){
+                /*if(appDetails.config){
                     console.log(appDetails.app_name);
-                    window.appSettings[appDetails.app_name] = appDetails.config;
-                    console.log(window);
-                }
+
+                    var storageName = "settings." + appDetails.app_name;
+
+                    console.log("LocalStorage data item: " + storageName);
+                    console.log(JSON.stringify(appDetails.config));
+
+                    localStorage.setItem(storageName, JSON.stringify(appDetails.config));
+
+                    console.log(JSON.parse(localStorage.getItem(storageName)));
+                }*/
 
                 var scriptURL = "modules/"+appDetails.app_name+"/" + index + "?window_id=" + appUniqueId;
 
@@ -111,9 +118,6 @@ $.getJSON("config/settings.json", function(json){
                     })
                     .fail(function(jqxhr, settings, exception) {
                         console.log('Not loaded, failed: ' + scriptURL);
-                        console.warn(settings);
-                        console.warn(exception);
-
                     });
             });
 

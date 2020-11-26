@@ -183,7 +183,7 @@
         "hassIOAuth": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI0MTNhNDNhYTJmY2M0ODBkYjdmMTdmM2M3MTI4NThlYiIsImlhdCI6MTYwMDg5MTI1NywiZXhwIjoxOTE2MjUxMjU3fQ.IVsoPHZ9yAKON8b4z9zM57oxEJ3Bom5praoQtfQJPC4",
         "hassIOURL": "http://192.168.1.77:8123/api/",
         "actionButtons": {
-          "Scenes": {
+          "scenes": {
             "icon": "icon-fireplace",
             "data": [
               {
@@ -209,7 +209,7 @@
               }
             ]
           },
-          "Lights": {
+          "lights": {
             "icon": "icon-lightbulb",
             "data": [
               {
